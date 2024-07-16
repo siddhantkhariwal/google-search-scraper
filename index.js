@@ -4,11 +4,11 @@ const { Parser } = require('json2csv');
 
 (async () => {
     try {
-        const browser = await puppeteer.launch({ headless: false});
+        const browser = await puppeteer.launch({ headless: true});
         const page = await browser.newPage();
         await page.setViewport({ width: 1920, height: 1080 });
 
-        await page.goto('https://www.google.com/localservices/prolist?g2lbs=AOHF13kqoGJRJ6u4fVljnEYhqvYSRWQ9pxpNIybzTlr_e3jC19WTZBQQglxocsJ60fF9BPDHJ3A0SMocAxExPxyHG2T6VpVVAw%3D%3D&hl=en-IN&gl=in&cs=1&ssta=1&q=laundries%20in%20jaipur&oq=laundries%20in%20jaipur&slp=MgBSAggCYACSAawCCg0vZy8xMWdteGw5eTl6Cg0vZy8xMWw1a2N4ZjJtCg0vZy8xMWZ5bHNsemQzCg0vZy8xMXJfZG5iNV9mCg0vZy8xMW12NnQ3bTA0Cg0vZy8xMXAxM3A4cDljCg0vZy8xMXB4em42NXB6Cg0vZy8xMWJ3NXYzM2hxCg0vZy8xMWNuNWwxaHIwCg0vZy8xMXY5Y2Z0MXhfCg0vZy8xMXFteDF2N2Q1Cg0vZy8xMXM3dHZuNzFuCg0vZy8xMXFwbHljMXlfCg0vZy8xMWM0YmNoYncyCg0vZy8xMXZydDVmcWN2Cg0vZy8xMWtwaHlwYnRsCg0vZy8xMWxtMnR5eWYxCg0vZy8xMWc3MjNqdGx4Cg0vZy8xMXkyZjlnbndkCg0vZy8xMWxkOF80cHQ3mgEGCgIXGRAA&src=2&serdesk=1&sa=X&ved=2ahUKEwiO8Pf3qtmGAxVucmwGHaobCpEQjGp6BAheEAE&scp=ChBnY2lkOmRyeV9jbGVhbmVyEkgSEgmB4ldM30psOREJLvIMOsbhDBoSCSn-VYActG05ERz7qWdtB_KEIgZKYWlwdXIqFA0VsPEPFZK8FS0dAgcbECXDtEMtMAAaCWxhdW5kcmllcyITbGF1bmRyaWVzIGluIGphaXB1cioLRHJ5IGNsZWFuZXI%3D');
+        await page.goto('https://www.google.com/localservices/prolist?g2lbs=AOHF13ni8QCEjseO7c_iX6TWEAVMZDPKH3m8UoRJ0ScoN5OJL8im9C2f_gPdnZte2igUsmNqU_NAFZ6q5ewaGAiD9dYgP0ZKfk07BH4o4_hfNnuxoDdxWN0%3D&hl=en-IN&gl=in&cs=1&ssta=1&oq=laundry%20in%20gurugram&src=2&sa=X&q=laundry%20in%20gurugram&ved=2ahUKEwiN-p2GkauHAxXU0IQAHX-SBlAQjdcJegQIABAF&slp=MgBAAVIECAIgAIgBAJoBBgoCFxkQAA%3D%3D&scp=ChBnY2lkOmRyeV9jbGVhbmVyEgAaACoLRHJ5IGNsZWFuZXI%3D');
 
         const laundries = [];
 
