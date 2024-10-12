@@ -47,6 +47,10 @@ npx puppeteer browsers install chrome
 
 To run the script, you'll need to pass a URL to a Google Local Services search results page and specify the output CSV filename.
 
+The url to be passed should be from this page
+
+![Screenshot](./assets/googleSearch.png)
+
 ### Example:
 
 ```javascript
